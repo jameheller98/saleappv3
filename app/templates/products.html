@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container">
+        <table class="table">
+            {% for p in products %}
+            <tr>
+                <td><img src="{{ p.images  }}" alt="{{ p.name }}" /></td>
+                <td>{{ p.name }}</td>
+                <td>{{ p.description }}</td>
+                <td>{{ p.price }}</td>
+                <td>
+                    <a href="#" >update</a>
+                    <a href="#" >delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+</body>
+</html>
