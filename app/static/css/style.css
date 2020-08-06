@@ -1,5 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #ff6666;
+    background-color: rgba(255,191,191, 0.8);
 }
 
 h1 {
@@ -17,3 +23,7 @@ a:link {
     text-decoration: none;
     color: white;
 }
+
+/* TABLE */
+.table__
+

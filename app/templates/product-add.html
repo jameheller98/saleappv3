@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product add</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<h1 class="text-center text-secondary card-title">ADD PRODUCT</h1>
+<section class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <form method="post w-80">
+                <div class="form-row">
+                    <div class="col">
+                        <label>Name product:</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label>Price product</label>
+                        <input type="number" name="price" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-9">
+                        <label>Images product</label>
+                        <input type="text" name="images" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <label>Categories</label>
+                        <select name="category_id" class="form-control">
+                            {% for cat in categories %}
+                                <option value="{{ cat.id }}">{{ cat.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description product</label>
+                    <textarea name="description" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-danger">
+                </div>
+            </form>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</section>
+</body>
+</html>

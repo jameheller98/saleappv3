@@ -6,14 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Store online</h1>
-    <ul>
-        <li><a href="{{ url_for('list_products') }}">All</a></li>
-        <li><a href="{{ url_for('product_by_cat_id', category_id = 1) }}">Phone</a></li>
-        <li><a href="{{ url_for('product_by_cat_id', category_id = 2) }}">ComputerTable</a></li>
+    <h1 class="text-center text-secondary card-title">Store online</h1>
+    <ul class="list-group list-group-horizontal nav__list d-flex justify-content-center">
+        <li class="list-group-item nav__item"><a class="nav__link" href="{{ url_for('list_products') }}">All</a></li>
+        <li class="list-group-item nav__item"><a class="nav__link" href="{{ url_for('product_by_cat_id', category_id = 1) }}">Phone</a></li>
+        <li class="list-group-item nav__item"><a class="nav__link" href="{{ url_for('product_by_cat_id', category_id = 2) }}">ComputerTable</a></li>
     </ul>
 </body>
 </html>

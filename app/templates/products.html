@@ -7,19 +7,44 @@
 </head>
 <body>
     <section class="container">
+        <h1 class="text-center text-secondary card-title">PRODUCT MANAGEMENT</h1>
+        <form class="form">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group row">
+                        <label class="col-form-label">Find name:</label>
+                        <div class="col"><input type="text" name="keyword" class="form-control"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group row">
+                        <label class="col-form-label">From price:</label>
+                        <div class="col"><input type="text" name="from_price" class="form-control"></div>
+                        <label class="col-form-label">To price:</label>
+                        <div class="col"><input type="text" name="to_price" class="form-control"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-danger">
+            </div>
+        </form>
+        <h1 class="text-center"><a class="badge badge-primary" href="{{ url_for("add_or_update_products") }}">Add product</a></h1>
         <table class="table">
+        <tbody class="table__tobdy">
             {% for p in products %}
-            <tr>
-                <td><img src="{{ p.images  }}" alt="{{ p.name }}" /></td>
-                <td>{{ p.name }}</td>
-                <td>{{ p.description }}</td>
-                <td>{{ p.price }}</td>
-                <td>
-                    <a href="#" >update</a>
-                    <a href="#" >delete</a>
+            <tr class="table__tr">
+                <td class="table__td"><img class="img-fluid img-thumbnail table__img" width="200px" src="{{ p.images  }}" alt="{{ p.name }}" /></td>
+                <td class="table__td">{{ p.name }}</td>
+                <td class="table__td">{{ p.description }}</td>
+                <td class="table__td">{{ p.price }}</td>
+                <td class="table__td">
+                    <h4><a href="#" class="badge badge-light">update</a></h4>
+                    <h4><a href="#" class="badge badge-light">delete</a></h4>
                 </td>
             </tr>
             {% endfor %}
+        </tbody>
         </table>
     </section>
 </body>
